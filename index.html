@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Transit Flow</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="overflow-y-scroll min-h-screen">
+    <!-- header -->
+    <header class="bg-indigo-950 w-full flex justify-center items-center p-14">
+      <main class="max-w-[1200px] w-full grid grid-cols-1 xl:grid-cols-3 gap-5">
+        <div class="flex gap-2 items-center col-start-1 col-end-2">
+          <div>
+            <div class="grid grid-cols-2 gap-1">
+              <div class="bg-amber-400 w-[10px] h-[10px] rotate-45"></div>
+              <div class="bg-amber-400 w-[10px] h-[10px]"></div>
+              <div class="bg-amber-400 w-[10px] h-[10px]"></div>
+              <div class="bg-amber-400 w-[10px] h-[10px]"></div>
+            </div>
+          </div>
+          <h2 class="text-3xl font-bold text-white">TransitFlow</h2>
+        </div>
+        <div
+          class="flex text-white text-sm justify-between col-start-1 col-end-2 lg:col-start-2 lg:col-end-4"
+        >
+          <div class="flex items-center gap-2">
+            <div
+              class="w-[63px] h-[63px] bg-blue-950 rounded-full border border-indigo-900 flex items-center justify-center hover:bg-indigo-900"
+            >
+              <img src="./assets/icon/clock.png" class="w-[22px] h-[22px]" />
+            </div>
+            <p class="text-sm">Mon - Sat 9.00 - 18.00 <br />Sunday Closed</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <div
+              class="w-[63px] h-[63px] bg-blue-950 rounded-full border border-indigo-900 flex items-center justify-center hover:bg-indigo-900"
+            >
+              <img src="./assets/icon/mail.png" class="w-[22px] h-[22px]" />
+            </div>
+            <p class="text-sm">Email <br />contact@logistics.com</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <div
+              class="w-[63px] h-[63px] bg-blue-950 rounded-full border border-indigo-900 flex items-center justify-center hover:bg-indigo-900"
+            >
+              <img
+                src="./assets/icon/telephone.png"
+                class="w-[22px] h-[22px]"
+              />
+            </div>
+            <p class="text-sm">Call Us <br />(00) 112 365 489</p>
+          </div>
+        </div>
+      </main>
+    </header>
+    <!-- /Header -->
+    <!-- section 1 -->
+    <section
+      class="w-full bg-cover bg-no-repeat bg-center relative"
+      style="
+        background-image: url('https://s3-alpha-sig.figma.com/img/f9d0/8740/770957579a2c5261b096d035626a1166?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GNcpBjAPbUrU1tEM-ntQO-LQBE-CLbK0jvFFX4zsC3AvRPrR5Ni75GU4IlzMd4sf39RAAFEWxoVo-Ae3AO1b1Msl1Ef1GahGx8KSAKRBzdp16M8sUMwS9A5N6uFp2gcF5C3lq4WXIhsAWJF3p0sRqpkzWGtLev5~rlrcMPBOP3dhegs8mRmCpchvEnFOSRPbgCDPS~j6aBmx8bl36erFejpn6mVyKzDQF3MHz3M4KfZg2znqFltPl4q-SEf3514qT0J8aoyGYSVwqXPW4LS9f78Nrkn7cb9Nm8BZw~Wytn5oocqfpawPERsmn7Hgz3cf6gXEtRu2aNWvqE8BGxfPQw');
+      "
+    >
+      <nav
+        class="absolut bg-indigo-950 bg-opacity-30 h-[78px] w-full flex justify-center z-10 px-14"
+      >
+        <main class="max-w-[1200px] w-full flex items-center h-[78px]">
+          <div class="flex w-full justify-between items-center">
+            <ul class="hidden lg:flex gap-5 text-white">
+              <li class="boreder-x border-white px-2">Home</li>
+              <li class="boreder-x border-white px-2">About</li>
+              <li class="boreder-x border-white px-2">Services</li>
+              <li class="boreder-x border-white px-2">Blog</li>
+              <li class="boreder-x border-white px-2">Contact</li>
+            </ul>
+            <select
+              class="flex flex-col lg:hidden gap-5 text-white bg-transparent"
+            >
+              <option class="text-slate-500" value="">Home</option>
+              <option class="text-slate-500" value="">About</option>
+              <option class="text-slate-500" value="">Service</option>
+              <option class="text-slate-500" value="">Blog</option>
+              <option class="text-slate-500" value="">Contact</option>
+            </select>
+            <div class="flex gap-5 items-center">
+              <div class="flex gap-3">
+                <img class="w-[32px]" src="./assets/icon/linkedin.png" alt="" />
+                <img class="w-[32px]" src="./assets/icon/twitter.png" alt="" />
+                <img class="w-[32px]" src="./assets/icon/facebook.png" alt="" />
+                <img
+                  class="w-[32px]"
+                  src="./assets/icon/instagram.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <button class="bg-white p-7">Request Quote</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </nav>
+      <main class="w-full bg-no-repeat bg-cover">
+        <div
+          class="max-w-[1200px] w-full flex justify-center lg:justify-start py-[212px] px-[300px]"
+        >
+          <div class="max-w-[551px] text-white flex flex-col gap-7">
+            <p
+              class="max-w-[276px] p-1 bg-indigo-900 bg-opacity-30 border-l-4 border-amber-400"
+            >
+              Logistics & Supply Chain Solutions
+            </p>
+            <h1 class="text-6xl font-bold">
+              Your Gateway to any Destination in the World
+            </h1>
+            <p class="text-white text-base font-semibold">
+              In augue ligula, feugiat ut nulla consequat. Ut est lacus,
+              molestie in arcu no, iaculis vehicula ipsum. Nunc faucibus, nisl
+              id dapibus finibus, enim diam interdum nulla, sed laoreet risus
+              lectus.
+            </p>
+            <button
+              class="bg-gradient-to-r from-amber-400 via-amber-300 to-orange-200 w-[194px] h-[60px] text-indigo-950 font-bold mt-5"
+            >
+              Explore More
+            </button>
+          </div>
+        </div>
+      </main>
+    </section>
+    <!-- section 1 -->
+    <!-- section 2 -->
+    <section class="bg-white w-full py-[70px] flex justify-center px-14">
+      <main
+        class="max-w-[1200px] w-full flex gap-10 items-center flex-col lg:flex-row lg:items-start"
+      >
+        <div>
+          <p
+            class="max-w-[100px] p-1 bg-indigo-900 bg-opacity-10 border-l-4 border-amber-400"
+          >
+            What We Do
+          </p>
+          <h2 class="text-4xl font-bold mt-3 lg:max-w-[294px] text-indigo-950">
+            Safe & Reliable Cargo Solutions
+          </h2>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+          <div class="flex gap-5 col-start-1 col-end-2">
+            <div><img class="w-[50px]" src="./assets/icon/cruise.png" alt=""></div>
+            <div class="border-l border-zinc-300 p-2">
+              <h2 class="text-2xl text-indigo-950">Sea Transport Services</h2>
+              <p class="text-base text-slate-500 max-w-[250px] w-full mt-2">
+                Following the quality of our service thus having gained trust of
+                our many clients.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-5 col-start-2 col-end-3">
+            <div><img class="w-[50px]" src="./assets/icon/buy.png" alt=""></div>
+            <div class="border-l border-zinc-300 p-2">
+              <h2 class="text-2xl text-indigo-950">Warehousing Services</h2>
+              <p class="text-base text-slate-500 max-w-[250px] w-full mt-2">
+                Following the quality of our service thus having gained trust of
+                our many clients.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-5 col-start-1 col-end-2">
+            <div><img class="w-[50px]" src="./assets/icon/departure.png" alt=""></div>
+            <div class="border-l border-zinc-300 p-2">
+              <h2 class="text-2xl text-indigo-950">Air Fright Services</h2>
+              <p class="text-base text-slate-500 max-w-[250px] w-full mt-2">
+                Following the quality of our service thus having gained trust of
+                our many clients.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-5 col-start-2 col-end-3">
+            <div><img class="w-[50px]" src="./assets/icon/cargo-truck.png" alt=""></div>
+            <div class="border-l border-zinc-300 p-2">
+              <h2 class="text-2xl text-indigo-950">Local Shipping Services</h2>
+              <p class="text-base text-slate-500 max-w-[250px] w-full mt-2">
+                Following the quality of our service thus having gained trust of
+                our many clients.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <!-- section 2 -->
+    <!-- section 3 -->
+    <section class="grid grid-rows-5 lg:grid-rows-8 grid-cols-1">
+      <article
+        class="col-start-1 col-end-2 row-start-1 row-end-3 lg:row-start-1 lg:row-end-5 bg-cover bg-no-repeat"
+        style="
+          background-position: 50% 70%;
+          background-image: linear-gradient(
+              0deg,
+              #091242 0%,
+              rgba(60, 60, 60, 0) 60.86%
+            ),
+            url('https://s3-alpha-sig.figma.com/img/1ea3/0812/2e06fc2b2e1943593343f58fd83b63cb?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=i6k7BVhAv4X8cFfupM3BEpr9QA8veWCz9N9SIO8Fic4C1CE8oTYpTlvPA~~vGWaXbkrSbs1Djt0idPBic04mhOw5nHEaBMwubbN-eSjnBgcskSBJuhGjWTgZF6i09VSMZ5VoSbXJktT0od87Nx5BUPUKNWlv-jt6IEVet-dlBhu1lfxxqcKNYvBiWBC780MYZU-dY13ZOnH5E0xfXcBZBhYY9yn5f-fb0QaHUCK2688Y4~ZZewGQita4-B5j0PnnjptPafnrG~3Zdc3ewk~5JQZMjSkd3DbfyVrUHFs2Y93qsDNQp0kteGZtuyvVMnfROi0rNP~-ugjsl1FLS3GT3Q');
+        "
+      ></article>
+      <main
+        class="bg-white justify-self-center col-start-1 col-end-2 row-start-2 row-end-6 lg:row-start-4 lg:row-end-9 max-w-[1200px] w-full pt-[60px] px-[60px] min-h-[532px] h-full items-center gap-5 flex flex-col-reverse lg:flex-row"
+      >
+        <div class="grid gap-5 max-w-[472px] w-full">
+          <div>
+            <p
+              class="max-w-[70px] p-1 bg-indigo-900 bg-opacity-10 border-l-4 border-amber-400"
+            >
+              Why Us
+            </p>
+            <h2 class="text-4xl font-bold mt-3">
+              We provide full range global logistics solution
+            </h2>
+          </div>
+          <div>
+            <p class="text-base text-slate-500 mt-2">
+              Leverage agile frameworks to provide a robust synopsis for
+              strategy foster collaborative thinking to further the overall
+              value proposition.
+            </p>
+            <p class="text-base text-slate-500 mt-2">
+              Organically grow the holistic world view of disruptive innovation
+              via workplace diversity and empowerment.
+            </p>
+          </div>
+          <div class="flex gap-3 items-center">
+            <div
+              class="bg-gradient-to-r from-amber-400 via-amber-300 to-orange-200 rounded-full w-[58px] h-[58px] flex justify-center items-center"
+            >
+              <img src="./assets/icon/box.png" alt="box icon" />
+            </div>
+            <p class="text-2xl font-[400]">Delivery on Time</p>
+          </div>
+          <div class="flex gap-3 items-center">
+            <div
+              class="bg-gradient-to-r from-amber-400 via-amber-300 to-orange-200 rounded-full w-[58px] h-[58px] flex justify-center items-center"
+            >
+              <img src="./assets/icon/money.png" alt="money icon" />
+            </div>
+            <p class="text-2xl font-[400]">Optimized Travel Cost</p>
+          </div>
+        </div>
+        <div class="grid grid-rows-6 grid-cols-8 w-full h-[532px]">
+          <div
+            class="bg-cover bg-no-repeat col-start-3 col-end-9 row-start-1 row-end-6"
+            style="
+              background-size: 200%;
+              background-position: 20% 100%;
+              background-image: url(https://s3-alpha-sig.figma.com/img/60bb/5bbd/5d432ffbeb5cf2e08adffeea5f040483?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=k04kpVjGpFMjDK4no1VuqCzErYejRRA0H8JCnuHuaMWDyQGf6A29v2KJfAxWhllwOTepi06egdYu9S1kZ0BOJa8rwip35WjyEKSQb5bZBpy0lzPdhKipL~Ex9EVDrRAlAtOaTrB39Hw-hTiVKm1tgzqDE3Xr0hVcDina~FOMwim13ufcc7MIS8HqMm-kznP37Qx7-7BH92LVcuFgeHb9ssHii6dhnZl5aLwRvWZ890sBdF4zBzY5NYkuye2bR1kIJ5Dtph-~hG9VxolerJ3K8UcazvjWv~xIPJi4uTrSp8HMebID-VrKvCoVULBc~CGHBeHaGXfWfLDZQL9gVuL5Iw__);
+            "
+          ></div>
+          <div
+            class="bg-cover bg-no-repeat col-start-1 col-end-5 row-start-4 row-end-7 border-[30px] border-white"
+            style="
+              background-size: 200%;
+              background-position: 30% 45%;
+              background-image: url(https://s3-alpha-sig.figma.com/img/e42f/e5aa/712a8518bd436ba8f0d978bb44e85d46?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HlNIRb-V7ef8XylzeBbU0y0Rao~DcVq3yXPCzBkDg7bV6gjOEANJibLle2bnT46vFMk2UK7tG6t~EoTTk0ksP8Rn9PVTLjncqy506robKxVqajgs1-xLPa1qAlWqxCC6pHAsJaS1y~LWiyctGVrGm93QzMFf6oBfH5YpPwiaJcbka3EssYusSKREWfpztK6inEIjp2oLcyMJVIMD2aPc6Wb7VEq~vJohtXNmhCcIwB~qg00A6nNVDWwsaKuc6~dA6Ttq86YcNtVCFtZVjMd7Z2h0dmyeJA95Y9Th95aKkvZldYlct3ISdtpZDUXEwoVroMdP-DXADZXwwYu~z04y0Q__);
+            "
+          ></div>
+        </div>
+      </main>
+    </section>
+    <!-- section 3 -->
+    <!-- section 4 -->
+    <section class="bg-white w-full flex justify-center py-[50px] px-14">
+      <div class="max-w-[1200px] w-full flex justify-center">
+        <div
+          class="flex gap-2 max-w-[600px] w-full h-[143px] items-center justify-center border border-zinc-300 border-l-0"
+        >
+          <h2 class="text-4xl font-bold">1294</h2>
+          <div
+            class="w-[10px] h-[10px] bg-gradient-to-r from-amber-400 via-amber-300 to-orange-200"
+          ></div>
+          <p>Delivered Packages</p>
+        </div>
+        <div
+          class="flex gap-2 max-w-[600px] w-full h-[143px] items-center justify-center border border-zinc-300 border-r-0"
+        >
+          <h2 class="text-4xl font-bold">3594</h2>
+          <div
+            class="w-[10px] h-[10px] bg-gradient-to-r from-amber-400 via-amber-300 to-orange-200"
+          ></div>
+          <p>Satisfied Clients</p>
+        </div>
+      </div>
+    </section>
+    <!-- section 4 -->
+    <!-- section 5 -->
+    <section class="grid grid-rows-7 grid-cols-0 min-h-screen">
+      <article
+        class="lg:col-start-1 lg:col-end-4 lg:row-start-1 lg:row-end-4 hidden w-full bg-white"
+      ></article>
+      <main
+        class="col-start-1 col-end-4 row-start-1 row-end-8 lg:row-start-2 lg:row-end-7 justify-self-center z-10 flex flex-col items-center gap-10 max-w-[1672px] w-full px-14"
+      >
+        <div>
+          <h1 class="text-4xl text-indigo-950 font-bold">
+            Transporting Across The World
+          </h1>
+        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 lg:min-w-[320px] w-full gap-5"
+        >
+          <div
+            class="flex flex-col text-white p-6 justify-end h-[407px]"
+            style="
+              background-size: cover;
+              background-blend-mode: multiply;
+              background-image: linear-gradient(
+                  0deg,
+                  #091242 14.34%,
+                  rgba(60, 60, 60, 0) 43.86%
+                ),
+                url(https://s3-alpha-sig.figma.com/img/4132/5c88/3fd49cc14b8e62c23883d6e4a6629a13?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CNNidRfdHhCijVUU0HxcfPD~GrTviOoWE6MlYIuw-ybZAL8Dooq45sX~HdUGpMb36~MshY9GkvTDMSf4yUwtgY3Ri7B4OeqGBOM5uFjhmmTc0NX1kg0FhJ9nfOuTjTh47~fRBp95DmAZg-siynqnnrWzDM0FkFYvlZF9bwsrKzDMuedm7GzvKo4nE94wfs1IvaQa5f2D9w4s0lFMXBy~EFuZWQjBNnEUcO~xmTGAENgf0xJQ3b4lTMyBQLjwW7N-Y1Xw2~4lBvoMsAN7ywUsIkagJxlE35S9f592fJ20loDJjVHvfKzZ2JCJX3tzKRDiBF-fZOOlRPpSa2Y0t01T8w__);
+            "
+          >
+            <h2 class="text-[20px]">Liquid Transportation</h2>
+            <p class="text-amber-400">Premium Tankers</p>
+          </div>
+          <div
+            class="flex flex-col text-white p-6 justify-end h-[407px]"
+            style="
+              background-size: cover;
+              background-blend-mode: multiply;
+              background-image: linear-gradient(
+                  0deg,
+                  #091242 14.34%,
+                  rgba(60, 60, 60, 0) 43.86%
+                ),
+                url(https://s3-alpha-sig.figma.com/img/6706/4638/7db6f6f72cc7743bdb79b2408440f691?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=prUoseraoezJNgUz0Z24ETWUXS3iHRjLIe7Mjr3arCtkRT3NzPQdsOMYsP2V0nck7WEhYnne-ALxkaQuS4JhgU2BdPcNDdOP1LL-SC6Pdg3vsrFOxAxAwSoG~lN~L-ziqiyBAthAkye7KqY6t0CCzH16BJkYqdZSR2ZvbOibD6eQxap16Rg-3isFZQh~9UIrr~4yqnjsJ72cXx8akfzbfR3gamDH~PzmxgwcbqOSbDCwdhZQ7TGzbrds4QD3fTJToSdyyTOYiC9H162JXTJiG2LGBfzV8cf2MxoBn84uB6EE-sWNT6Ai0QflmAnMO9Bp~0PnD9OK8Zqp0M1taf~NGw__);
+            "
+          >
+            <h2 class="text-[20px]">Packaging Solutions</h2>
+            <p class="text-amber-400">Warehouse Management</p>
+          </div>
+          <div
+            class="flex flex-col text-white p-6 justify-end h-[407px]"
+            style="
+              background-size: cover;
+              background-blend-mode: multiply;
+              background-image: linear-gradient(
+                  0deg,
+                  #091242 14.34%,
+                  rgba(60, 60, 60, 0) 43.86%
+                ),
+                url(https://s3-alpha-sig.figma.com/img/29b6/abb5/43a443f5a091cdc88bddbbe7979e60a2?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JfekOvPt4CQyZmKrC507UH4d5~JOhkmPX2eb5toGH~5uNDWU2QbYPG5Rpif-tHL~6d5w3jMMQcOOviJRz-k5YnzQVKPg4xpmBFT6RkfIQs0t~QIZXSiH-glAUoPcYEYTkNrmt9ZSqC-Qza69H-hf3Uz8-ExpqaJLI0-cCuF7rL2p36D-T6Rod2PYZmkwdzOPox~BeLh1icK0yLlWIcYvUTu5965vwfljh77sbiO6kmew1Hrow8c~pvdRUByaExVCDH0W5WQ02OSbLqtferE42uir9oQ1YfRCQKEki7f~HI9ps-6JBcwCFi3cs2vSGFcL4gfQ7QloqQWgPz~o5GeoGA__);
+            "
+          >
+            <h2 class="text-[20px]">Contract Logistics</h2>
+            <p class="text-amber-400">Road Transportation</p>
+          </div>
+          <div
+            class="flex flex-col text-white p-6 justify-end h-[407px]"
+            style="
+              background-size: cover;
+              background-blend-mode: multiply;
+              background-image: linear-gradient(
+                  0deg,
+                  #091242 14.34%,
+                  rgba(60, 60, 60, 0) 43.86%
+                ),
+                url(https://s3-alpha-sig.figma.com/img/0977/f1c5/749555e8c90f63fa93554cf24e9f6e47?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=E4iVq~2TtcgSIVjcbwqK2fv6TZuDLxRi6H7TPrDBT9kF5X9wSO6GOZUxLx4AfZ~CaFk-nJkgzE10cV7y5q4kpIDrJfPB17HalEPCzgjDJsdKBknejDyMICcsSziLGCr~ermeLLuAxC1ao57fTzzI~UXc7OtGwOV9x6HvHslgawcDTCQF5qCL64kKSd5m04JF-cpaN8zi-1gl5o0K4uFR-FeMqncnhZHPRSw5hWoWeDnMJ0W6tDJfkaa7A2NrKcmG8kFufnYTMuo2HAOGBG5-VzSzXIhZVtn9Hg57vW6RgoV8ylqwJiaube5EhCiTOxbJMPEIJtElieOHF36mIrcLsQ__);
+            "
+          >
+            <h2 class="text-[20px]">Warehouse & Distribution</h2>
+            <p class="text-amber-400">Large Warehouse</p>
+          </div>
+          <div
+            class="flex flex-col text-white p-6 justify-end h-[407px]"
+            style="
+              background-size: content;
+              background-blend-mode: multiply;
+              background-image: linear-gradient(
+                  0deg,
+                  #091242 14.34%,
+                  rgba(60, 60, 60, 0) 43.86%
+                ),
+                url(https://s3-alpha-sig.figma.com/img/d1df/cd3a/d2a9c2187132c26713bec73eea855e68?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=avObQyTxzV9isBrBWFeSmgcOCxyzHkuL-ZIpvEbV05kR6HT0x3PL-a7yzG7~RCvQPXVXpk4tGFbZdCMf7FI2uvMy6fb4H1zs-V2EepNM0dTO5lvBYAb29LjQns31WFEXAgi4xi1j2bAodxap7ajpN764x8L2cTWlxwI0E7SSCR6kY2Ghmd48S~MjQj0BSa-JmHAHsiNk7zbf-aoklTMAPaZh2MG4yWV-XMg8bwAKRotQ6~sxs4wr8NUwoon75mkUJLkx1nvtr~veHCwKybQY-xFqGmLhLfWkjAMwTWLmz~nrxFoNMVaZ-eWcRIFrspbWpxjRnA-WGBP8VJHdzNCFVQ__);
+            "
+          >
+            <h2 class="text-[20px]">Specialized Transport</h2>
+            <p class="text-amber-400">Ocean Transports</p>
+          </div>
+        </div>
+        <div>
+          <button class="w-[194px] h-[60px] bg-indigo-950 text-white mt-5 mb-7">
+            More Work
+          </button>
+        </div>
+      </main>
+      <article
+        class="col-start-1 col-end-4 row-start-4 row-end-8 w-full bg-amber-400"
+      ></article>
+    </section>
+    <!-- section 5 -->
+    <!-- section 6 -->
+    <section class="bg-white px-14 flex justify-center w-full py-[60px]">
+      <main class="max-w-[1200px] w-full">
+        <div class="flex gap-5 justify-between w-full items-end">
+          <div>
+            <p
+              class="max-w-[100px] p-1 bg-indigo-900 bg-opacity-10 border-l-4 border-amber-400"
+            >
+              Testimonial
+            </p>
+            <h1 class="text-4xl text-indigo-950 font-bold">
+              What Our Customer Say
+            </h1>
+          </div>
+          <div class="flex gap-3">
+            <button
+              class="bg-indigo-950 rounded-full w-[43px] h-[43px] flex justify-center items-center"
+            >
+              <img class="w-[15px]" src="./assets/icon/arrow.png" alt="" />
+            </button>
+            <button
+              class="bg-indigo-950 rounded-full w-[43px] h-[43px] flex justify-center items-center"
+            >
+              <img
+                class="w-[15px]"
+                src="./assets/icon/right-arrow.png"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-col items-center lg:flex-row mt-5">
+          <div
+            class="max-w-[600px] w-full p-[50px] bg-zinc-100 flex flex-col gap-8"
+          >
+            <div class="flex justify-between items-center">
+              <div class="flex gap-3 items-center">
+                <div
+                  class="w-[91px] h-[91px] rounded-full"
+                  style="
+                    background-size: 300%;
+                    background-repeat: no-repeat;
+                    background-position: 100% 10%;
+                    background-image: url(https://s3-alpha-sig.figma.com/img/56bf/cab4/e922fcbfda6448d41af4c6caf3793903?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=obmUjNmr8jFA7i2N~aYjMMob3nGGaPx949AY7pEi24IuVjq-2qWk1ih6quk0iW1q27yQS3QQbeNDrrS9ftMUg11fh3EakXvQA6Lsvii~eCEGFOCfAhQxTW9IAEajDxbAE0g~3-6Ndrbwu4-zXNs2lsYHJe7xnroi2xzCLdU60eeJ37wXDx~SIoArE21kVTzXEI7wCMvbtQ3VQ3OrKNnGzkyFCNKpTDHJ1-mBXygarbT9IXjefXxTKS6knhHGsSGP8RaQXKe16Krf0VCKvux-Xm49koffh-QZgZuf0W8ikXKv5bGJMHwHQ2z3eC-bZgKgLxRaegVfi4NrxfebKKYy7w__);
+                  "
+                ></div>
+                <div>
+                  <h2 class="text-[20px] font-bold">Kathleen Smith</h2>
+                  <p class="text-[16px]">Fuel Company</p>
+                </div>
+              </div>
+              <div
+                class="w-[70px] h-[70px] bg-amber-400 rounded-full justify-center items-end flex text-[50px] text-indigo-950"
+              >
+                "
+              </div>
+            </div>
+            <div class="text-slate-500">
+              Leverage agile frameworks to provide a robust synopsis for
+              strategy foster collaborative thinking to further the overall
+              value proposition. Organically grow the holistic world view of
+              disruptive innovation via workplace diversity and empowerment.
+            </div>
+            <div class="flex gap-3">
+              <img src="./assets/icon/star.png" alt="" />
+              <img src="./assets/icon/star.png" alt="" />
+              <img src="./assets/icon/star.png" alt="" />
+              <img src="./assets/icon/star.png" alt="" />
+              <img src="./assets/icon/star.png" alt="" />
+            </div>
+          </div>
+          <div
+            class="max-w-[600px] w-full p-[50px] bg-indigo-950 text-white flex flex-col gap-8"
+          >
+            <div class="flex justify-between items-center">
+              <div class="flex gap-3 items-center">
+                <div
+                  class="w-[91px] h-[91px] rounded-full"
+                  style="
+                    background-size: 200%;
+                    background-repeat: no-repeat;
+                    background-position: 45% 30%;
+                    background-image: url(https://s3-alpha-sig.figma.com/img/b0b5/575b/38d94edf1272fe60bcdd977fef76cd81?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XwxVoI4W-8H6aVI6zakxIJ3P6IA7kN2a-GhzwFsgCvZMdJ6lcYR-UCufEnmzbvRdyj-WDbzI8FioaOKDhKIp0~vzmsa5HR3mWJan~3P7zvp5V1VO0PKQ52XqI~X5QrLmoUJwF2bBEEUwCGN-CV1haGeYcceQ4xa2YR4iYaL4FvWpyBjif6Gg0ckf-h1a6PUXs9LxO0KN8htijayLqkmIETF2JR3uEiSycWQ-WZlZ85I4r508-3hMA8eI1c8uurrg4O9EX~aggTltijocZZE-KIOzEr1KSx6cUd86jLPSPqc25PbRAf5g4D144qgEXljHk6MVVu7aUAQ22jlH680b7A__);
+                  "
+                ></div>
+                <div>
+                  <h2 class="text-[20px] font-bold">John Martin</h2>
+                  <p class="text-[16px]">Restoration Company</p>
+                </div>
+              </div>
+              <div
+                class="w-[70px] h-[70px] bg-amber-400 rounded-full justify-center items-end flex text-[50px] text-indigo-950"
+              >
+                "
+              </div>
+            </div>
+            <div>
+              Leverage agile frameworks to provide a robust synopsis for
+              strategy foster collaborative thinking to further the overall
+              value proposition. Organically grow the holistic world view of
+              disruptive innovation via workplace diversity and empowerment.
+            </div>
+            <div class="flex gap-3">
+              <img src="./assets/icon/star.png" alt="" />
+              <img src="./assets/icon/star.png" alt="" />
+              <img src="./assets/icon/star.png" alt="" />
+              <img src="./assets/icon/star.png" alt="" />
+              <img src="./assets/icon/star.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <!-- section 6 -->
+    <!-- why chose -->
+    <section class="grid grid-cols-12 grid-rows-6">
+      <article
+        class="mx-xl:hidden bg-blue-950 col-start-1 col-end-13 row-start-1 row-end-4 xl:col-start-1 xl:col-end-7 xl:row-start-1 xl:row-end-8"
+      ></article>
+      <main
+        class="max-xl:bg-zinc-300 col-start-1 col-end-13 xl:col-start-2 xl:col-end-12 row-start-1 row-end-7 xl:row-start-2 xl:row-end-6 grid grid-cols-6 px-14 py-6 gap-5 flex w-full"
+      >
+        <div
+          class="col-start-1 col-end-9 justify-self-center xl:col-start-1 xl:col-end-5 h-[610px] max-w-[930px] w-full z-10 flex justify-center items-end bg-cover bg-no-repeat"
+          style="
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(https://s3-alpha-sig.figma.com/img/60b6/f254/d57e1d77c4855d6115a9508f06155bce?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YBv7ZvBhxqEH5jrChlFS8YbTyD-5QboA6H7BnKZosmi-OvVGNun953dkEwT-YDXsG2wfCdSfsK8AycDzK3V9nnhQ7PVCrn8PWm8-d~jpSxG1X58R0xOmmyzifmIw-jNMwIHIQKXiJZuCm913kbLHO3sSQaL3BfUkJebyAB0RG-VqHvKwegpAeQq6oXOsXzcMH-r28P6SPlpzNJuuT~rEc5c0TahGOOzZamJY616V1w8j9E-V-u-qfNbSBHlsjYoPpTt2Y3-Zn3DsJORATKlqFcU-C-sghDtbRIeCuk6Fh5qgVZwdaWX-aEY8Rfms1W0Ktw9M1AhOT3qGASuhHxmm4A__);
+          "
+        >
+          <div
+            class="bg-amber-400 max-h-[139px] max-w-[417px] h-full w-full flex justify-center items-center"
+          >
+            <div class="flex gap-3 max-w-[259px]">
+              <div>icon</div>
+              <div class="text-[18px] font-semibold">
+                Moving your products across borders
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-start-2 col-end-5 justify-self-center max-xl:justify-self-center xl:col-start-5 xl:col-end-7 self-center z-10"
+        >
+          <div class="max-w-[553px] w-full flex flex-col gap-10">
+            <div>
+              <p
+                class="max-w-[110px] p-1 bg-indigo-900 bg-opacity-10 border-l-4 border-amber-400"
+              >
+                Why Choose
+              </p>
+              <h1 class="text-4xl max-w-[438px] font-bold mt-3">
+                We create opportunity to reach potential
+              </h1>
+            </div>
+            <p class="text-base text-slate-500 max-w-[438px]">
+              Leverage agile frameworks to provide a robust synopsis for
+              strategy foster collaborative thinking to further the overall
+              value proposition.
+            </p>
+
+            <div class="flex gap-6">
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="flex justify-center items-center bg-amber-400 rounded-full w-[63px] h-[63px]"
+                  >
+                    <img src="./assets/icon/box.png" />
+                  </div>
+                  <div>Safe Package</div>
+                </div>
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="flex justify-center items-center bg-amber-400 rounded-full w-[63px] h-[63px]"
+                  >
+                    <img src="./assets/icon/global.png" />
+                  </div>
+                  <div>Global Tracking</div>
+                </div>
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="flex justify-center items-center bg-amber-400 rounded-full w-[63px] h-[63px]"
+                  >
+                    <img
+                      class="w-[28px] h-[32px]"
+                      src="./assets/icon/clock1.png"
+                    />
+                  </div>
+                  <div>In Time Delivery</div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="flex justify-center items-center bg-amber-400 rounded-full w-[63px] h-[63px]"
+                  >
+                    <img src="./assets/icon/cruise.png" />
+                  </div>
+                  <div>Ship Everyware</div>
+                </div>
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="flex justify-center items-center bg-amber-400 rounded-full w-[63px] h-[63px]"
+                  >
+                    <img src="./assets/icon/suport.png" />
+                  </div>
+                  <div>24/7 Support</div>
+                </div>
+                <div class="flex gap-2 items-center">
+                  <div
+                    class="flex justify-center items-center bg-amber-400 rounded-full w-[63px] h-[63px]"
+                  >
+                    <img src="./assets/icon/dollar-coin.png" />
+                  </div>
+                  <div>Transparant Pricing</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <article
+        class="bg-zinc-300 col-start-1 col-end-13 row-start-3 row-end-7 lg:col-start-7 lg:col-end-13 lg:row-start-1 lg:row-end-7"
+      ></article>
+    </section>
+    <!-- why chose -->
+    <!-- section 7 -->
+    <section
+      class="w-full flex flex-col items-center justify-center gap-7 py-[60px] px-14"
+    >
+      <div class="flex flex-col items-center">
+        <div>
+          <p
+            class="max-w-[150px] p-1 bg-indigo-900 bg-opacity-10 border-l-4 border-amber-400"
+          >
+            The Transporter
+          </p>
+        </div>
+        <h1 class="text-4xl font-bold text-indigo-950 mt-3">
+          Meet Expert Team
+        </h1>
+      </div>
+      <div
+        class="max-w-[1200px] w-full grid grid-cols-1 xl:grid-cols-3 gap-5 justify-items-center"
+      >
+        <div
+          class="h-[538px] max-w-[364px] w-full xl:min-w-[364px] grid grid-cols-6 grid-rows-9"
+        >
+          <div
+            class="bg-cover bg-no-repeat col-start-1 col-end-7 row-start-1 row-end-8"
+            style="
+              background-image: url(https://s3-alpha-sig.figma.com/img/a29f/5e6b/b1a1aa76508e6af64f2914071a39dec7?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lI8sLJ-FQ1sPhWyxVVLvU7ocbw1qyRVCgjrCJT9uapgJaPwTJmuMWb2ZeCcOm12~WD1gv5HOaMoX6rgeJb8habrepdVHh7aBFkSgVvlMNF65FJ-YZZl5jTe~b0N1D2gvF3a-3HMSWsfQQGhW~uKKwN1LW9si2G0D2sQEPd2ov0vPi~foAMdfyJqH7xw8d2rnfGrJRtEBHMvfc4~Wyq5oQepifn36uTah2Om4PWzIGUWnym7oo~4oic5-exg45g4VXsQg7xTTZ2kiyL6rVLO0eAX5sfY1nJsuGPKnS~vuiWAEQP-KSpse8tuMq0jBb~wvg~LTQ~niiLl4jmBh0mZSSw__);
+            "
+          ></div>
+          <div
+            class="col-start-4 col-end-7 row-start-6 row-end-8 z-10 self-center"
+          >
+            <div
+              class="bg-gradient-to-r from-amber-400 via-amber-300 to-orange-200 flex justify-center gap-5 py-3"
+            >
+              <img
+                class="w-[28px] invert"
+                src="./assets/icon/twitter.png"
+                alt=""
+              /><img
+                class="w-[28px] invert"
+                src="./assets/icon/facebook.png"
+                alt=""
+              /><img
+                class="w-[28px] invert"
+                src="./assets/icon/instagram.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="bg-indigo-950 col-start-1 col-end-7 row-start-7 row-end-9 text-white flex flex-col justify-end p-5"
+          >
+            <h2 class="text-xl">Jessca Arow</h2>
+            <p>Designer</p>
+          </div>
+        </div>
+        <div class="h-[538px] min-w-[364px] grid grid-cols-6 grid-rows-9">
+          <div
+            class="bg-cover bg-no-repeat col-start-1 col-end-7 row-start-1 row-end-8"
+            style="
+              background-image: url(https://s3-alpha-sig.figma.com/img/ceed/9cf8/74991ad5377a178343757654a13d1581?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RrzHDPBxA6xlcCq0xM3~0ESVERf6ysXeLNWxPPj1qKnhF81oqzETI3BJ1A3dds2k0F2yEfEkoR0mikPGrJsFkhvBfeYjOs8QcFXqBO1DsqjvrgC8FfII0jJBui~v0CT9-vRHGyarGLpXcU4Dl9OUzh-ywYVfEf8tj1eFbySx9UzHd3FLM9jwfybUZbxfO0gVBDEfPq9jrbSkzURCxPNiCOtZK4LWyXpOFzf-1-w6a-oJHRO9X-wgY87bGaqkqF4Rt7nG~AnuhoLo6Xf3YOjqW9o1ll~Ax6fKyLg1k-uBpUgytKlsNB2VjZNMZsxmliVxFH4tviBUdlE5jYw4ilIjIg__);
+            "
+          ></div>
+          <div
+            class="col-start-4 col-end-7 row-start-6 row-end-8 z-10 self-center"
+          >
+            <div
+              class="bg-gradient-to-r from-amber-400 via-amber-300 to-orange-200 flex justify-center gap-5 py-3"
+            >
+              <img
+                class="w-[28px] invert"
+                src="./assets/icon/linkedin.png"
+                alt=""
+              />
+              <img
+                class="w-[28px] invert"
+                src="./assets/icon/twitter.png"
+                alt=""
+              /><img
+                class="w-[28px] invert"
+                src="./assets/icon/facebook.png"
+                alt=""
+              /><img
+                class="w-[28px] invert"
+                src="./assets/icon/instagram.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="bg-indigo-950 col-start-1 col-end-7 row-start-7 row-end-9 text-white flex flex-col justify-end p-5"
+          >
+            <h2 class="text-xl">Kathen Smith</h2>
+            <p>Designer</p>
+          </div>
+        </div>
+        <div class="h-[538px] min-w-[364px] grid grid-cols-6 grid-rows-9">
+          <div
+            class="bg-cover bg-no-repeat col-start-1 col-end-7 row-start-1 row-end-8"
+            style="
+              background-position: 50% 50%;
+              background-image: url(https://s3-alpha-sig.figma.com/img/d2d9/c089/9419fa8b1781fd648483eb3452064dd6?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LPnFagNvxtRjz4GYFCDqNnTt~ll4BsNcjXY4gZimde6Q9-8C9XfiwhvqtTg9eGdW2Aqg-y6hNLvkpb8bXVkM2PHOFLBel1enrPUMEHbqm5lRheKCz-jBOY92qqtfSnf7yjCDrAUhAbo3vayIVEQmxmwTWGZ0bDnNznJP0tBxee9Z34lYb-9vMTjg1AlfnDAaOfvd5xz3qfcgx8dL--NvidrIw5-vBW~OmR~s3LexUCOctlFibxLKJKIVhJuf~P1NHpbC7raVoNtEyZhCUG7xW9HIsktlRRKfjflzG~wEQy6BTnU~tBY7EX08ddnxi0ij0etIWp45nJ9-LBLUH8HlXw__);
+            "
+          ></div>
+          <div
+            class="col-start-4 col-end-7 row-start-6 row-end-8 z-10 self-center"
+          >
+            <div
+              class="bg-gradient-to-r from-amber-400 via-amber-300 to-orange-200 flex justify-center gap-5 py-3"
+            >
+              <img
+                class="w-[28px] invert"
+                src="./assets/icon/facebook.png"
+                alt=""
+              /><img
+                class="w-[28px] invert"
+                src="./assets/icon/instagram.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="bg-indigo-950 col-start-1 col-end-7 row-start-7 row-end-9 text-white flex flex-col justify-end p-5"
+          >
+            <h2 class="text-xl">Rebeca Tylor</h2>
+            <p>Designer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section 7 -->
+    <!-- section 8 -->
+    <section class="py-[80px] w-full flex justify-center bg-indigo-950">
+      <main class="max-w-[1200px] w-full grid gap-10">
+        <div
+          class="flex justify-center items-center gap-8 flex-col xl:flex-row"
+        >
+          <div class="flex flex-row xl:flex-col gap-8">
+            <div>
+              <div class="text-white max-w-[353px]">
+                <p
+                  class="max-w-[100px] p-1 bg-indigo-900 bg-opacity-10 border-l-4 border-amber-400"
+                >
+                  Contact
+                </p>
+                <h2 class="text-4xl font-bold mt-2">Get in touch with us</h2>
+                <p class="mt-1">
+                  Leverage agile frameworks to provide a robust synopsis for
+                  strategy foster collaborative thinking to further the overall
+                  value.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="text-white flex flex-col gap-4">
+                <div class="flex items-center gap-2">
+                  <div
+                    class="w-[63px] h-[63px] bg-blue-950 rounded-full border border-indigo-900 flex items-center justify-center hover:bg-indigo-900"
+                  >
+                    <img
+                      src="./assets/icon/clock.png"
+                      class="w-[22px] h-[22px]"
+                    />
+                  </div>
+                  <p class="text-sm">
+                    Mon - Sat 9.00 - 18.00 <br />Sunday Closed
+                  </p>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <div
+                    class="w-[63px] h-[63px] bg-blue-950 rounded-full border border-indigo-900 flex items-center justify-center hover:bg-indigo-900"
+                  >
+                    <img
+                      src="./assets/icon/mail.png"
+                      class="w-[22px] h-[22px]"
+                    />
+                  </div>
+                  <p class="text-sm">Email <br />contact@logistics.com</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div
+                    class="w-[63px] h-[63px] bg-blue-950 rounded-full border border-indigo-900 flex items-center justify-center hover:bg-indigo-900"
+                  >
+                    <img
+                      src="./assets/icon/telephone.png"
+                      class="w-[22px] h-[22px]"
+                    />
+                  </div>
+                  <p class="text-sm">Call Us <br />(00) 112 365 489</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="max-w-[758px] w-full flex flex-col gap-5">
+            <div class="flex gap-3">
+              <input
+                class="border border-white text-white p-2 bg-transparent w-full"
+                placeholder="Your Name"
+                type="text"
+              />
+              <input
+                class="border border-white text-white p-2 bg-transparent w-full"
+                placeholder="Email"
+                type="text"
+              />
+            </div>
+            <div class="flex gap-3">
+              <input
+                class="border border-white text-white p-2 bg-transparent w-full"
+                placeholder="Phone"
+                type="text"
+              />
+              <input
+                class="border border-white text-white p-2 bg-transparent w-full"
+                placeholder="City"
+                type="text"
+              />
+            </div>
+            <div>
+              <textarea
+                class="border border-white text-white p-2 bg-transparent w-full"
+                rows="4"
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+            <div>
+              <button
+                class="bg-gradient-to-r from-amber-400 via-amber-300 to-orange-200 w-[194px] h-[60px] text-indigo-950 font-bold mt-5"
+              >
+                Submit Message
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid justify-items-center grid-cols-1 xl:grid-cols-2">
+          <img src="./assets/image/Capture.PNG" alt="" />
+          <img src="./assets/image/Capture1.PNG" alt="" />
+        </div>
+      </main>
+    </section>
+    <!-- section 8 -->
+    <!-- section 9 -->
+    <section
+      class="w-full flex flex-col items-center justify-center py-[70px] gap-8"
+    >
+      <div class="flex flex-col items-center">
+        <div>
+          <p
+            class="max-w-[150px] p-1 bg-indigo-900 bg-opacity-10 border-l-4 border-amber-400"
+          >
+            The Transporter
+          </p>
+        </div>
+        <h1 class="text-4xl font-bold text-indigo-950 mt-3">
+          Meet Expert Team
+        </h1>
+      </div>
+      <main class="flex flex-col">
+        <div class="flex flex-col lg:flex-row gap-5 border-y py-5">
+          <div
+            class="w-[458px] h-[308px] bg-cover bg-no-repeat"
+            style="
+              background-image: url(https://s3-alpha-sig.figma.com/img/a4cc/d161/95412f3d81ea9115e2c0891e17ab5c31?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aam~1gsKbYnKh7t6rKzPxhW-lJEAANHOv8au0masRDSDeLvnlkXg3aLUZOdRtTV4DC0VUkP1ys3qHFL22TsE9yuAgnz995QqYLFQRcoso~8Ti0IrrgjEshCr3mKG4Xma7uo8Ms5SQvZan5ljw2l4lLosNr-OlXs2DKtnPjbShpU-LoGwM0X2KUsdjfqQCuEZ85GiuRWLmf7BQmvI0RteqlbrPQyyzG8TI2N9IWEypqoqEnbZQGq5-3VMbp5xfBRkheEKSfecsMlqNqjeBKbGyegeWq5jTh~BCw3f88W09HuiefjR484IKFebBH6R35rnAPztD4CTbDZbTLkHeUH90w__);
+            "
+          ></div>
+          <div class="flex gap-4">
+            <div class="flex flex-col gap-5 items-center">
+              <img class="w-[51px]" src="./assets/icon/calendar.png" alt="" />
+              <h2 class="text-4xl font-bold">8</h2>
+              <p class="text-slate-500">September</p>
+            </div>
+            <div
+              class="p-4 max-w-[364px] flex flex-col gap-4 border-l border-zinc-300"
+            >
+              <h2 class="text-2xl">
+                Inland freight a worthy solution for your business
+              </h2>
+              <p class="text-slate-500 text-base">
+                We are dedicated in creating added value for our customers by
+                implementing modern technology in our work.
+              </p>
+              <ul>
+                <li>Urgent transport solutions</li>
+                <li>Reliable & experienced staffs</li>
+                <li>Urgent transport solutions</li>
+                <li>Reliable & experienced staffs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-5 border-y py-5">
+          <div
+            class="w-[458px] h-[308px] bg-cover bg-no-repeat"
+            style="
+              background-image: url(https://s3-alpha-sig.figma.com/img/c730/ef1b/3d5a7cabfda83dafc29c05aaf9174567?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QKGrdik2dPnKjgPddD29PGeqmzK3yyCL3b-WUqdYAyBeQt3PZ4F9qrFi7dWMx3rraSQUhcH8YC17e3eR4PqY4Ng8RK26LlOHUYfsGrs7et7owRB1VvqAVSKPwwnU0~aG6T9Qib7UcH0rt49zTHire0PgQ15~6nC~o5bJ19l6Bo4HmiaU1m3S5UYVjJgcYJ8yq7SDn~WswjNgl-mgWPXP3Iv9-Rdh0Pm8F5WuLufcDMsKPaGvQ6PhmWrNBBPB3WrzwnUsnYm1yHq2MW4ArQc4czN5ZoxNUcXiu1Y8YZB5MU8pXrMW6R9tbWysQ3Hpjea-RCeVM0PLH~p8yF8E8ufyLQ__);
+            "
+          ></div>
+          <div class="flex gap-4">
+            <div class="flex flex-col gap-5 items-center">
+              <img class="w-[51px]" src="./assets/icon/calendar.png" alt="" />
+              <h2 class="text-4xl font-bold">12</h2>
+              <p class="text-slate-500">September</p>
+            </div>
+            <div
+              class="p-4 max-w-[364px] flex flex-col gap-4 border-l border-zinc-300"
+            >
+              <h2 class="text-2xl text-amber-400">
+                How technology can help redraw the supply chain map
+              </h2>
+              <p class="text-slate-500 text-base">
+                We are dedicated in creating added value for our customers by
+                implementing modern technology in our work.
+              </p>
+              <ul>
+                <li>Urgent transport solutions</li>
+                <li>Reliable & experienced staffs</li>
+                <li>Urgent transport solutions</li>
+                <li>Reliable & experienced staffs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-5 border-y py-5">
+          <div
+            class="w-[458px] h-[308px] bg-cover bg-no-repeat"
+            style="
+              background-image: url(https://s3-alpha-sig.figma.com/img/abe9/15eb/1c0b2303926e18332e579b68afdc1014?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oUvMThz61jLfzA4WxqkKqAQDlQEKgKbAeWenGrQpx7ZtXwX9U3cSBg1k4iTtXSIwpG4FDB03DlaxQ0AoIAI~uaDU8GwY9kcbWEu5~uxf9LpcSAynQKOjNNU8oaYQMi6Hf5eIE2Og7QKdmuZIrF5PepEupgg7cFiYfOLB83I5fhYq~dJVhSv7J4qZqolsxIL1bapxoyc7B9ULOYbqVrZVgQXfsuGQoxaF24UWIU0RhKkKqsVlXJG30TexM4IRveHK1Q11tzINiPQEsHkgbp86-NnIX4zdEd7o8xMNhNpDO0EJCaCIP0EmSODu6-21KUfkp7fG8uTNo-bT0N-xFX5Z~Q__);
+            "
+          ></div>
+          <div class="flex gap-4">
+            <div class="flex flex-col gap-5 items-center">
+              <img class="w-[51px]" src="./assets/icon/calendar.png" alt="" />
+              <h2 class="text-4xl font-bold">25</h2>
+              <p class="text-slate-500">September</p>
+            </div>
+            <div
+              class="p-4 max-w-[364px] flex flex-col gap-4 border-l border-zinc-300"
+            >
+              <h2 class="text-2xl">
+                Five things you should have ready for your broker
+              </h2>
+              <p class="text-slate-500 text-base">
+                We are dedicated in creating added value for our customers by
+                implementing modern technology in our work.
+              </p>
+              <ul>
+                <li>Urgent transport solutions</li>
+                <li>Reliable & experienced staffs</li>
+                <li>Urgent transport solutions</li>
+                <li>Reliable & experienced staffs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div>
+        <button class="w-[194px] h-[60px] bg-indigo-950 text-white mt-5 mb-7">
+          More Blog
+        </button>
+      </div>
+    </section>
+    <!-- section 9 -->
+    <!-- Footer -->
+    <section class="w-full">
+      <article
+        class="min-h-[412px] bg-cover bg-no-repeat"
+        style="
+          background-position: 10% 40%;
+          background-image: url(https://s3-alpha-sig.figma.com/img/a92b/8445/cf8af4565bf33d8fce7eb23fe7f3b10c?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=k065YpIaHBXnDP8emRbrX5kpPqLgcLwcSG5-7hYh~u0I8PV8Er2Nv5Le1BFFZQdj9X5dJjmB0G1zDESDcNpsItZ2WrUGi1l6mHSjSnxwk4X4QhTQbSmUUQU9tUaEt3V3MPWKblW0y6SrHAesaqS7weYGsoiInd-PUOznj2oQMzBfCEHEibiCfI2hvJjQqFxEgzize1tIj-FY65Ouqjn4uE1cbLzh3SiaiGjAnF35EkXs1bOdnjEIt7D3Sv-JGI6cvkDbks1MQE35xVjIbHOCjOtYEe8s8H7~cNrTn3jxG48msy7rtSFYNCkk-Me9xjiCFJjxsWP8IfZnjtWKtw~eIw__);
+        "
+      ></article>
+    </section>
+    <footer
+      class="min-h-[562px] w-full grid grid-cols-10 grid-rows-12 bg-indigo-950"
+    >
+      <div
+        class="max-xl:hidden xl:bg-white xl:bg-opacity-10 xl:col-start-1 xl:col-end-3 xl:row-start-1 xl:row-end-3"
+      ></div>
+      <div
+        class="max-xl:hidden xl:bg-white xl:bg-opacity-10 xl:col-start-5 xl:col-end-11 xl:row-start-1 xl:row-end-3"
+      ></div>
+
+      <div class="col-start-3 col-end-9 row-start-2 xl:row-start-1 row-end-11">
+        <div class="px-10 py-7">
+          <div
+            class="grid grid-cols-1 justify-items-center lg:grid-cols-5 w-full gap-10"
+          >
+            <div class="col-start-1 col-end-3">
+              <div class="flex flex-col gap-6">
+                <div class="flex gap-2 items-center">
+                  <div>
+                    <div class="grid grid-cols-2 gap-1">
+                      <div
+                        class="bg-amber-400 w-[10px] h-[10px] rotate-45"
+                      ></div>
+                      <div class="bg-amber-400 w-[10px] h-[10px]"></div>
+                      <div class="bg-amber-400 w-[10px] h-[10px]"></div>
+                      <div class="bg-amber-400 w-[10px] h-[10px]"></div>
+                    </div>
+                  </div>
+                  <h2 class="text-3xl font-bold text-white">TransitFlow</h2>
+                </div>
+                <div class="text-white mt-5">
+                  <div class="max-w-[319px] flex flex-col gap-5">
+                    <p>
+                      Leverage agile frameworks to provide a robust synopsis for
+                      strategy collaborative thinking to further the overall
+                      value proposition.
+                    </p>
+                    <div class="flex items-center gap-2">
+                      <div
+                        class="w-[63px] h-[63px] bg-blue-950 rounded-full border border-indigo-900 flex items-center justify-center hover:bg-indigo-900"
+                      >
+                        <img
+                          src="./assets/icon/mail.png"
+                          class="w-[22px] h-[22px]"
+                        />
+                      </div>
+                      <p class="text-sm">Email <br />contact@logistics.com</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <div
+                        class="w-[63px] h-[63px] bg-blue-950 rounded-full border border-indigo-900 flex items-center justify-center hover:bg-indigo-900"
+                      >
+                        <img
+                          src="./assets/icon/telephone.png"
+                          class="w-[22px] h-[22px]"
+                        />
+                      </div>
+                      <p class="text-sm">Call Us <br />(00) 112 365 489</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="justify-self-start lg:col-start-4 lg:col-end-5 xl:col-start-3 xl:col-end-4 flex flex-col gap-10"
+            >
+              <div class="text-white text-2xl text-semibold">Pages</div>
+              <ul class="flex flex-col gap-5 text-white">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Blog</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <div
+              class="col-span-1 lg:col-start-1 lg:col-end-3 xl:col-start-4 xl:col-end-5 flex flex-col gap-10"
+            >
+              <div class="text-white text-2xl text-semibold">Utility</div>
+              <ul class="flex flex-col gap-5 text-white">
+                <li>Style</li>
+                <li>Guide</li>
+                <li>Changelog</li>
+                <li>Licenses</li>
+                <li>Protected</li>
+                <li>Not Found</li>
+              </ul>
+            </div>
+            <div
+              class="lg:col-start-3 lg:col-end-5 xl:col-start-5 xl:col-end-6 flex flex-col gap-10"
+            >
+              <div class="text-white text-2xl text-semibold">Subscribe</div>
+              <div>
+                <input
+                  class="bg-transparent border border-slate-500 p-3 text-slate-500 w-full"
+                  placeholder="Email Here"
+                  type="text"
+                />
+                <div class="flex gap-5 items-center mt-3">
+                  <button
+                    class="bg-gradient-to-r from-amber-400 via-amber-300 to-orange-200 w-[164px] h-[50px] text-indigo-950 font-bold"
+                  >
+                    Send Now
+                  </button>
+                  <div class="flex gap-3">
+                    <img
+                      class="w-[28px]"
+                      src="./assets/icon/linkedin.png"
+                      alt=""
+                    />
+                    <img
+                      class="w-[28px]"
+                      src="./assets/icon/twitter.png"
+                      alt=""
+                    />
+                    <img
+                      class="w-[28px]"
+                      src="./assets/icon/facebook.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="w-full py-10 flex justify-center bg-indigo-950 text-white px-14">
+      <div class="max-w-[1200px] w-full gap-4 flex flex-col lg:flex-row lg:justify-between">
+        <div>
+        <p>
+          Copyright © TransitFlow | Designed by VictorFlow - Powered by Webflow
+        </p>
+        </div>
+        <div>
+        <ul class="flex gap-8 text-slate-500">
+          <li>Styel Guide</li>
+          <li>License</li>
+          <li>Changelog</li>
+          <li>Password</li>
+        </ul>
+      </div>
+      </div>
+    </footer>
+  </body>
+</html>
